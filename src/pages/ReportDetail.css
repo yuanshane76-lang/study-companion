@@ -1,0 +1,345 @@
+.report-page {
+  padding: var(--spacing-2xl);
+  max-width: 900px;
+}
+
+.report-page.loading,
+.report-page.empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-lg);
+}
+
+.report-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.report-title {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.report-title .back-link {
+  display: inline-block;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+}
+
+.report-title .back-link:hover {
+  color: var(--color-primary);
+}
+
+.report-title h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+}
+
+.report-plan {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* 计时器 */
+.timer {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md) var(--spacing-lg);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+}
+
+.timer-display {
+  font-size: var(--font-size-xl);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  color: var(--color-text-primary);
+  min-width: 80px;
+  text-align: center;
+}
+
+.timer-btn {
+  padding: var(--spacing-xs) var(--spacing-md);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  transition: all 0.15s;
+}
+
+.timer-btn.start {
+  background: var(--color-success);
+  color: #fff;
+}
+
+.timer-btn.start:hover {
+  opacity: 0.9;
+}
+
+.timer-btn.pause {
+  background: var(--color-warning);
+  color: #fff;
+}
+
+.timer-btn.pause:hover {
+  opacity: 0.9;
+}
+
+.timer-btn.reset {
+  background: var(--color-bg-tertiary);
+  color: var(--color-text-secondary);
+}
+
+.timer-btn.reset:hover {
+  background: var(--color-bg-hover);
+}
+
+/* 报告区块 */
+.report-body {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-2xl);
+}
+
+.report-section {
+  padding: var(--spacing-lg);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+}
+
+.report-section h2 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-md);
+}
+
+/* Section header with action button */
+.section-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.section-header h2 {
+  margin-bottom: 0;
+}
+
+.btn-adjust,
+.btn-generate-links {
+  padding: var(--spacing-xs) var(--spacing-md);
+  background: var(--color-bg-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-adjust:hover,
+.btn-generate-links:hover {
+  background: var(--color-bg-active);
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.btn-adjust:disabled,
+.btn-generate-links:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.section-empty {
+  padding: var(--spacing-lg);
+  text-align: center;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-sm);
+}
+
+.section-empty .hint {
+  font-size: var(--font-size-xs);
+  margin-top: var(--spacing-xs);
+}
+
+/* 任务列表 */
+.task-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.task-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: background 0.15s;
+}
+
+.task-item:hover {
+  background: var(--color-bg-active);
+}
+
+.task-item.done {
+  opacity: 0.6;
+}
+
+.task-item.done .task-title {
+  text-decoration: line-through;
+}
+
+.task-checkbox {
+  font-size: var(--font-size-lg);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.task-content {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+  min-width: 0;
+}
+
+.task-title {
+  font-size: var(--font-size-md);
+  font-weight: 500;
+}
+
+.task-desc {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+/* 文本区域 */
+.notes-textarea,
+.summary-textarea {
+  width: 100%;
+  padding: var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-primary);
+  resize: vertical;
+  font-size: var(--font-size-md);
+  line-height: 1.6;
+  transition: border-color 0.15s;
+}
+
+.notes-textarea:focus,
+.summary-textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.notes-textarea {
+  min-height: 120px;
+}
+
+.summary-textarea {
+  min-height: 80px;
+}
+
+/* 总结状态 */
+.summary-section {
+  transition: border-color 0.3s;
+}
+
+.summary-section.completed {
+  border: 2px solid var(--color-success);
+}
+
+.summary-status {
+  margin-top: var(--spacing-sm);
+}
+
+.status-complete {
+  font-size: var(--font-size-sm);
+  color: var(--color-success);
+  font-weight: 500;
+}
+
+.status-incomplete {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+}
+
+/* 推荐链接列表 */
+.links-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.link-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  padding: var(--spacing-md);
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-md);
+}
+
+.link-title {
+  flex: 1;
+  font-size: var(--font-size-md);
+  color: var(--color-text-link);
+  text-decoration: none;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.link-title:hover {
+  text-decoration: underline;
+}
+
+.link-source {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  background: var(--color-bg-tertiary);
+  padding: 2px var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  flex-shrink: 0;
+}
+
+.link-feedback {
+  display: flex;
+  gap: var(--spacing-xs);
+  flex-shrink: 0;
+}
+
+.feedback-btn {
+  padding: var(--spacing-xs);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: var(--font-size-md);
+  opacity: 0.4;
+  transition: opacity 0.15s;
+}
+
+.feedback-btn:hover {
+  opacity: 0.8;
+}
+
+.feedback-btn.active {
+  opacity: 1;
+}
+
+.link-disclaimer {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-tertiary);
+  margin-top: var(--spacing-sm);
+  text-align: center;
+}

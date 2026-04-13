@@ -1,0 +1,225 @@
+.subject-detail-page {
+  padding: var(--spacing-2xl);
+  max-width: 900px;
+}
+
+.subject-detail-header {
+  margin-bottom: var(--spacing-2xl);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+}
+
+.back-link {
+  display: inline-block;
+  color: var(--color-text-tertiary);
+  font-size: var(--font-size-sm);
+  margin-bottom: var(--spacing-md);
+  text-decoration: none;
+}
+
+.back-link:hover {
+  color: var(--color-primary);
+}
+
+.subject-detail-header h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+}
+
+.weekly-link {
+  margin-left: auto;
+  padding: var(--spacing-sm) var(--spacing-md);
+  background: var(--color-bg-active);
+  color: var(--color-text-primary);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  text-decoration: none;
+  transition: all 0.2s;
+}
+
+.weekly-link:hover {
+  background: var(--color-primary);
+  color: white;
+  border-color: var(--color-primary);
+}
+
+.loading {
+  padding: var(--spacing-3xl);
+  text-align: center;
+  color: var(--color-text-tertiary);
+}
+
+.subject-detail-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3xl);
+  color: var(--color-text-tertiary);
+}
+
+.subject-detail-empty p {
+  margin-bottom: var(--spacing-lg);
+  font-size: var(--font-size-lg);
+}
+
+/* 计划列表 */
+.plans-list {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.plan-card {
+  padding: var(--spacing-xl);
+  background: var(--color-bg-secondary);
+  border-radius: var(--radius-lg);
+}
+
+.plan-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+}
+
+.plan-header h3 {
+  font-size: var(--font-size-lg);
+  font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+}
+
+.plan-dates {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-secondary);
+}
+
+.plan-status {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  font-weight: 500;
+}
+
+.plan-status.active {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.plan-status.completed {
+  background: var(--color-bg-active);
+  color: var(--color-primary);
+}
+
+.plan-status.paused {
+  background: #fff3e0;
+  color: #e65100;
+}
+
+/* 进度条 */
+.plan-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+}
+
+.progress-bar {
+  flex: 1;
+  height: 6px;
+  background: var(--color-bg-tertiary);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: 3px;
+  transition: width 0.3s;
+}
+
+.progress-text {
+  font-size: var(--font-size-xs);
+  color: var(--color-text-secondary);
+  white-space: nowrap;
+}
+
+/* 日报列表 */
+.plan-reports {
+  margin-top: var(--spacing-md);
+}
+
+.plan-reports h4 {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+  margin-bottom: var(--spacing-sm);
+}
+
+.reports-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.report-item {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-xs);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: var(--color-bg-primary);
+  border-radius: var(--radius-sm);
+  font-size: var(--font-size-xs);
+  text-decoration: none;
+  color: var(--color-text-primary);
+  transition: all 0.15s;
+}
+
+.report-item:hover {
+  background: var(--color-bg-active);
+}
+
+.report-item.today {
+  background: var(--color-bg-active);
+  border: 1px solid var(--color-primary);
+}
+
+.report-item.completed .report-date {
+  text-decoration: line-through;
+  color: var(--color-text-tertiary);
+}
+
+.report-status {
+  font-size: var(--font-size-sm);
+}
+
+/* 操作按钮 */
+.plan-actions {
+  display: flex;
+  gap: var(--spacing-lg);
+  margin-top: var(--spacing-md);
+  padding-top: var(--spacing-md);
+  border-top: 1px solid var(--color-border-light);
+}
+
+.action-link {
+  font-size: var(--font-size-sm);
+  color: var(--color-text-link);
+  text-decoration: none;
+}
+
+.action-link:hover {
+  text-decoration: underline;
+}
+
+.action-link.danger {
+  color: var(--color-danger);
+}
+
+.action-link.danger:hover {
+  text-decoration: none;
+}

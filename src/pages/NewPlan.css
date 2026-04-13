@@ -1,0 +1,195 @@
+.new-plan-page {
+  padding: var(--spacing-2xl);
+  max-width: 700px;
+}
+
+.new-plan-page h1 {
+  font-size: var(--font-size-2xl);
+  font-weight: 600;
+  margin-bottom: var(--spacing-2xl);
+}
+
+.new-plan-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xl);
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-sm);
+}
+
+.form-row {
+  display: flex;
+  gap: var(--spacing-lg);
+}
+
+.form-row .form-section {
+  flex: 1;
+}
+
+.form-label {
+  font-size: var(--font-size-sm);
+  font-weight: 600;
+  color: var(--color-text-secondary);
+}
+
+.form-input,
+.form-textarea {
+  padding: var(--spacing-sm) var(--spacing-md);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  background: var(--color-bg-primary);
+  font-size: var(--font-size-md);
+  transition: border-color 0.15s;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+  border-color: var(--color-primary);
+}
+
+.form-textarea {
+  min-height: 120px;
+  resize: vertical;
+  line-height: 1.6;
+}
+
+/* 输入类型选择 */
+.type-selector {
+  display: flex;
+  gap: var(--spacing-md);
+}
+
+.type-btn {
+  flex: 1;
+  padding: var(--spacing-lg);
+  border: 2px solid var(--color-border);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-md);
+  font-weight: 500;
+  text-align: center;
+  transition: all 0.15s;
+  background: var(--color-bg-primary);
+  color: var(--color-text-secondary);
+}
+
+.type-btn:hover {
+  border-color: var(--color-primary);
+  color: var(--color-primary);
+}
+
+.type-btn.active {
+  border-color: var(--color-primary);
+  background: var(--color-bg-active);
+  color: var(--color-primary);
+}
+
+/* PDF 上传区域 */
+.pdf-upload-area {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-3xl);
+  border: 2px dashed var(--color-border);
+  border-radius: var(--radius-lg);
+  background: var(--color-bg-secondary);
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.pdf-upload-area:hover {
+  border-color: var(--color-primary);
+  background: var(--color-bg-active);
+}
+
+.pdf-upload-icon {
+  font-size: 48px;
+  margin-bottom: var(--spacing-md);
+}
+
+.pdf-upload-area p {
+  font-size: var(--font-size-md);
+  color: var(--color-text-secondary);
+}
+
+.pdf-hint {
+  font-size: var(--font-size-sm) !important;
+  color: var(--color-text-tertiary) !important;
+  margin-top: var(--spacing-xs) !important;
+}
+
+.pdf-file-input {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+
+/* 操作按钮 */
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+  padding-top: var(--spacing-md);
+}
+
+.form-error {
+  padding: var(--spacing-md);
+  background: #fff2f0;
+  border: 1px solid #ffccc7;
+  border-radius: var(--radius-md);
+  color: var(--color-danger);
+  font-size: var(--font-size-sm);
+}
+
+.btn-primary:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* PDF 文件信息 */
+.pdf-file-info {
+  text-align: center;
+}
+
+.pdf-file-name {
+  font-size: var(--font-size-md) !important;
+  font-weight: 500 !important;
+  color: var(--color-text-primary) !important;
+  margin-bottom: var(--spacing-xs) !important;
+}
+
+.pdf-file-size {
+  font-size: var(--font-size-sm) !important;
+  color: var(--color-text-secondary) !important;
+  margin-bottom: var(--spacing-md) !important;
+}
+
+.btn-parse-pdf {
+  padding: var(--spacing-xs) var(--spacing-lg);
+  background: var(--color-primary);
+  color: var(--color-text-inverse);
+  border-radius: var(--radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: 500;
+  transition: background 0.15s;
+}
+
+.btn-parse-pdf:hover {
+  background: var(--color-primary-hover);
+}
+
+.btn-parse-pdf:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.pdf-parsed-hint {
+  font-size: var(--font-size-sm) !important;
+  color: var(--color-success) !important;
+  margin-top: var(--spacing-md) !important;
+}
